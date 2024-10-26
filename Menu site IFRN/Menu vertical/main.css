@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    padding: 0;
     background-color: #f4f4f4;
 }
 .user {
@@ -17,27 +17,27 @@ body {
     align-items: center;
     border: 1px solid white;
     padding-top: 5px;
-    margin-top: 50px;
+    margin-top: 0;
+    margin-bottom: 10px;
     gap: 50px;
-    margin-top: 50px;
     border: 1px solid red;
 }
-
 .perfil svg {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
+
 }
 
 .corpo-verde {
-    position: fixed ;
+    padding-top: 80px;
     width: 350px;
-    height: 100vw;
+    height: 727px;
     background-color: #172625;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 .barra-de-pesquisa {
     display: flex; 
     justify-content: center;
-    border-radius: 10px; 
     width: 250px; 
     max-width: 100%; 
     padding-top: 10px;
@@ -45,16 +45,24 @@ body {
 }
 
 .barra-de-pesquisa input[type="search"] {
-    flex: 1; 
-    border: none; 
-    padding: 10px; 
-    font-size: 13px; 
-    border-radius: 10px; 
-    width: 100%;
-    outline: none; 
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid aliceblue; /* Linha preta na parte inferior */
+    background-color: transparent; /* Remove a cor de fundo */
+    padding: 10px;
+    font-size: 13px;
+    outline: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.menu-container{
+
+    margin-left: 50px ;
+
 }
 .menu{
-    margin-top: 50px;
+    margin-top: 20px;
+    position: relative;
 }
 .menu>p{
     display: flex;
@@ -62,4 +70,39 @@ body {
     margin-left: 20px;
     margin-top: 15px;
    
+}
+.menu-subitem{
+    display: none;
+    position: absolute;
+    left: 160px;
+    top: 60%;
+    width: 200px; /* Largura do menu */
+    border-radius: 5px; 
+    z-index: 1000; /* Garante que o menu apareça acima de outros elementos */
+    background-color: #223a39;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+}
+.menu:hover .menu-subitem {
+    display: block; /* Exibe ao passar o mouse */
+    visibility: visible; /* Torna visível */
+}
+.info-subitem{
+    margin: 15px;
+    position: relative;
+}
+.menu-subitem-conteudo{
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 60%;
+    width: 200px; /* Largura do menu */
+    border-radius: 5px; 
+    z-index: 1000; /* Garante que o menu apareça acima de outros elementos */
+    background-color: #385756;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.info-subitem:hover .menu-subitem-conteudo{
+    display: block; /* Exibe ao passar o mouse */
+    visibility: visible; /* Torna visível */
 }
