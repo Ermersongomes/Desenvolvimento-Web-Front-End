@@ -8,7 +8,7 @@ body {
     padding: 0 20px; /* Espaço nas laterais para a tela */
 }
 header {
-    border: 1px solid black;
+    
     width: 100%;
     max-width: 85vw; 
     height: 100px;
@@ -17,6 +17,8 @@ header {
     align-items: center;
     margin: 0 auto;
     background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Box shadow suave */
+    border-top: 5px;
 }
 header>p{
     color: grey;
@@ -76,6 +78,9 @@ header>p{
     color: #093b00;
     max-width: 85vw;  
     margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Box shadow suave */
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px;
 }
 .menu{
     margin-right: 50px;
@@ -83,6 +88,7 @@ header>p{
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
+    position: relative;
     
 }
 .menu:last-child{
@@ -91,4 +97,50 @@ header>p{
 .menu:hover{
     background-color: #d4d3d3;
     box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.1);
+}
+/*Janelas submenu*/
+.menu-subitem {
+    display: none; 
+    position: absolute;
+    background-color: #d4d3d3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    left: 0; /* Alinha à esquerda do item pai */
+    top: 100%; /* Posiciona abaixo do item pai */
+    width: 150px; /* Largura do menu */
+    border-radius: 5px; 
+    z-index: 1000; /* Garante que o menu apareça acima de outros elementos */
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.menu-subitem>p{
+    padding: 5px;
+}
+.menu-subitem-conteudo{
+    display: none;
+    position: absolute;
+    background-color: #d4d3d3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    left: 0; /* Alinha à esquerda do item pai */
+    top: 100%; /* Posiciona abaixo do item pai */
+    width: 350px; /* Largura do menu */
+    border-radius: 5px; 
+    z-index: 1000; /* Garante que o menu apareça acima de outros elementos */
+    
+}
+.menu-subitem-conteudo>P{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.menu:hover .menu-subitem {
+    display: block; /* Exibe ao passar o mouse */
+    visibility: visible; /* Torna visível */
+}
+.menu:hover  .menu-subitem-conteudo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas iguais */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin-right: 10px;
+    visibility: visible; /* Torna visível */
 }
