@@ -1,0 +1,44 @@
+*{
+ box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+}
+.section-1{
+    width: 33%;
+    border: 1px solid black;
+}
+.section-2{
+    width: 33%;
+    border: 1px solid blue;
+}
+.section-3{
+    width: 33%;
+    border: 1px solid red;
+}
+@media only screen and (max-width: 900px) {
+    .section-1{
+        width: 30%;
+    }
+    .section-2{
+        width: 60%;
+    }
+    .section-3{
+        width: 10%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .container{
+        display: block;
+    }
+    .section-1{
+        width: 100%;
+    }
+    .section-2{
+        width: 100%;
+    }
+    .section-3{
+        display: none;
+    }
+}
