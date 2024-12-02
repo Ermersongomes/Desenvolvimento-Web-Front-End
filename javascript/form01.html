@@ -9,6 +9,12 @@
     <script src='form01.js'></script>
 </head>
 <body>
+
+    <script>
+       
+
+        
+    </script>
     <div class="container">
         <div class="telalogin">
             <form action="">
@@ -19,22 +25,34 @@
                 </div>
                 <div>
                     <label>E-mail: </label> <br>
-                    <input type="email" name="email">
+                    <input type="email" name="email" id="email"
+                        onfocus="destacar(this)"
+                        onblur="normal(this)"
+                    >
                 </div>
                 <div>
                     <label>Senha: </label> <br>
-                    <input type="password" name="senha">
+                    <input type="password" name="senha"
+                        onfocus="destacar(this)"
+                        onblur="normal(this)"
+                    >
                 </div>
                 <div>
                     <label>Nome: </label> <br>
-                    <input type="text" name="nome">
+                    <input type="text" name="nome"
+                        onfocus="destacar(this)"
+                        onblur="normal(this)"
+                    >
                 </div>
                 <div>
                     <label>Data de Nascimento: </label> <br>
-                    <input type="date" name="datanascimento">
+                    <input type="date" name="datanascimento"
+                        onfocus="destacar(this)"
+                        onblur="normal(this)"
+                    >
                 </div>
                 <div class="buttoncontainer">
-                    <div class="button" onclick='enviar();'>Enviar</div>
+                    <div class="button" onclick='funcao01();'>Enviar</div>
                 </div>
             </form>
         </div>
