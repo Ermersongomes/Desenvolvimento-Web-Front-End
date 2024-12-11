@@ -1,0 +1,25 @@
+input[type=text]{
+    font-size: 12;
+    width: 200px;
+    border: 1px solid grey;
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+label{
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.botão{
+    width: 100px;
+    background-color: rgb(5, 201, 5);
+    border: 1px solid rgb(101, 166, 4);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 0 5px #aaa;
+}
