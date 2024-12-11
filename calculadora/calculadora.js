@@ -16,9 +16,9 @@ function add_numero(num){
 
 function add_operador(op){
     operador = op;
-    num1 = parseInt(input.value);
+    num1 = parseFloat(input.value);
     input.value = "";
-    
+    history.innerHTML = num1 + " " + operador;
 }
 
 function total(){
@@ -27,7 +27,6 @@ function total(){
     switch(operador){
         case "+":
             input.value = num1 + num2;
-            window.alert(input.value);
             break;
         case "-":
             input.value = num1 - num2;
@@ -37,7 +36,7 @@ function total(){
             break;
         case "/":
             if( num2 === 0){
-                window.alert("Divisão por zero não é permitido";)
+                window.alert("Divisão por zero não é permitido");
                 input.value = "";
             }else{
                 input.value = num1 / num2;
