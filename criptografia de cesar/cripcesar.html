@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/criptografia de cesar/formulario.css'>
+    
+</head>
+<body>
+    <form>
+            <h2>Criptografia de césar</h2>
+    </form>
+    <div>
+        <label>Digite uma mensagem</label>
+        <input type="text" id="msg">
+    </div>
+    <div class="botao" onclick="cript()">Criptografar</div>
+
+
+    <script>
+            function cript(){
+                let msg = document.getElementById('msg').value;
+                let code = msg.charCodeAt(0);
+                let letra = String.fromCharCode(code);
+                //continua
+                window.alert(msg.charCodeAt(0));
+                window.alert(String.fromCharCode(65+3))
+            }
+    </script>
+</body>
+</html>

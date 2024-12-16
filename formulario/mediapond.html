@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <form>
+        <div>
+            <h2>Média ponderada</h2>
+        </div>
+        <div>
+            <label>Digite a nota 1:</label>
+            <input type="text" id="nota1" value="0">
+        </div>
+        <div>
+            <label>Digite a nota 2:</label>
+            <input type="text" id="nota2" value="0">
+        </div>
+        <div class="botao" onclick="calcular()">Calcular</div>
+        <div class="resultado" id="resultado"></div>
+    </form>
+
+
+    <script>
+        function calcular(){
+            let nota1 = document.getElementById('nota1'); //Pega o objeto que esta nota1 pelo id
+            let nota2 = document.getElementById('nota2'); //Pega o objeto que esta nota2 pelo id
+            let res = 0;
+         
+
+            nota1 = parseInt(nota1.value); // Pega o objeto e trasnforma o valor dele em inteiro.
+            nota2 = parseInt(nota2.value);
+
+            res = (nota1*2 + nota2*3) / 5;
+
+            document.getElementById('resultado').innerHTML = res;
+            
+        }
+    </script>
+</body>
+</html>
