@@ -1,0 +1,68 @@
+Questão 1:
+let pegarString = prompt("Digite uma palavra: ");
+console.log("\n");
+
+
+let numCarct = pegarString.length;
+console.log("Número de caracteres: ", numCarct); 
+console.log("\n");
+
+let maiuscula = pegarString.toUpperCase();
+console.log("Em maiúsculo:", maiuscula);
+console.log("\n");
+
+let vogais = (pegarString.match(/[aeiouAEIOU]/g) || []).length;
+console.log("Número de vogais: ", vogais);
+console.log("\n");
+
+let comecaUNI =  pegarString.toUpperCase().startsWith("UNI");
+if(comecaUNI == true){
+    console.log("Esta palavra começa com 'UNI'");
+    console.log("\n");
+
+}else{
+     console.log("Esta Não palavra Não começa com 'UNI'");
+     console.log("\n");
+
+}
+
+let terminaRIO = pegarString.toUpperCase().endsWith("RIO");
+
+if(terminaRIO == true){
+    console.log("Esta palavra termina com 'RIO'");
+    console.log("\n");
+
+}else{
+    console.log("Esta palavra Não termina com 'RIO'");
+    console.log("\n");
+
+}
+
+let totalNumeros = 0;
+for (let i of pegarString) {
+    if (!isNaN(i) && i !== " ") {
+        totalNumeros++;
+    }
+}
+console.log("total de números: ", totalNumeros);
+console.log("\n");
+
+
+let palidromo =  pegarString.toUpperCase()
+let invertida = palidromo.split("").reverse().join("");
+if(palidromo == invertida){
+    console.log("Esta palavra é um palidromo!");
+    console.log("\n");
+
+}else{
+    console.log("Esta palavra não é um palidromo");
+    console.log("\n");
+
+}
+
+Referencias: 
+
+toUpperCase => https://www.w3schools.com/jsref/jsref_touppercase.asp
+reverse => https://www.w3schools.com/jsref/jsref_reverse.asp
+join => https://www.w3schools.com/jsref/jsref_join.asp
+length => https://www.w3schools.com/jsref/jsref_length_string.asp

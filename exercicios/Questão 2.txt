@@ -1,0 +1,29 @@
+Questão 2 :  
+
+ let numerosEscritos  = ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"];
+
+let numero = prompt("Digite um número: ");
+
+let resultado = "";
+
+for (let i = 0; i  < numero.length; i++){
+    let digito = numero [i];
+    
+    if (digito === "-"){
+        continue
+    }
+    
+    resultado += numerosEscritos[parseInt(digito)];
+    
+    if (i < numero.length - 1) {
+       resultado += ", ";
+    }
+    
+    
+}
+console.log("Resultado:", resultado);
+
+
+
+
+// Referencias: https://www.w3schools.com/jsref/jsref_length_string.asp

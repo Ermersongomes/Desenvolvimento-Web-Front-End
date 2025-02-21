@@ -1,0 +1,19 @@
+questão 3: 
+
+let texto = prompt("Digite seu texto aqui: ");
+
+let textoSemEspaco = texto.replace(/\s+/g, "");
+let numeroCaracter = textoSemEspaco.length;
+
+let palavras = texto.trim().split(/\s+/);
+let numeroPalavras = palavras.length;
+
+console.log("Número total de caracteres:", numeroCaracter);
+console.log("Número total de palavras:", numeroPalavras);
+
+Referencias: 
+
+https://www.w3schools.com/jsref/jsref_length_string.asp
+https://www.w3schools.com/jsref/jsref_replace.asp
+https://www.w3schools.com/jsref/jsref_trim_string.asp
+https://www.w3schools.com/jsref/jsref_split.asp

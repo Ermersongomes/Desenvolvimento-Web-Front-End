@@ -1,0 +1,14 @@
+questão 4:
+
+ let texto = prompt("Digite seu texto aqui: ");
+
+let textoSemEspaco = texto.trim().replace(/\s+/g, " ");
+
+console.log("Texto corrigido:", textoSemEspaco);
+
+
+
+Referencias:
+
+https://www.w3schools.com/jsref/jsref_trim_string.asp
+https://www.w3schools.com/jsref/jsref_replace.asp
